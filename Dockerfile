@@ -9,8 +9,7 @@ ENV KRAFT_CONTAINER_HOST_NAME=
 ENV KRAFT_CREATE_TOPICS=
 ENV KRAFT_PARTITIONS_PER_TOPIC=
 
-RUN apt update \
-    && apt install -y --no-install-recommends wget
+RUN apk update && apk upgrade && apk add wget
 
 RUN wget https://mirrors.ocf.berkeley.edu/apache/kafka/${kafkaversion}/kafka_${scalaversion}-${kafkaversion}.tgz -O kafka.tgz \
     && tar xvzf kafka.tgz \
