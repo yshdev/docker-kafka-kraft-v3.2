@@ -1,4 +1,4 @@
-FROM openjdk:8u292-slim-buster
+FROM amazoncorretto:11-alpine3.13
 
 WORKDIR /opt
 
